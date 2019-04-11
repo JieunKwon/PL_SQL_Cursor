@@ -55,24 +55,35 @@ LOOP
 1. Simple Loop
 
 LOOP 
+
    statements; 
+   
    EXIT; 
+   
    {or EXIT WHEN condition;}
+   
 END LOOP; 
 
 
 2. FOR LOOP:
 
 FOR record_name IN cusror_name 
+
 LOOP 
+
     process the row...
+    
 END LOOP; 
+
 
 3. While LOOP
 
 WHILE <condition> 
+ 
  LOOP statements; 
+ 
 END LOOP; 
+ 
  
  Example
  ----
