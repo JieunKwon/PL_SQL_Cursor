@@ -3,13 +3,17 @@
 What are Cursors?
 -----
 
-A cursor is a temporary work area created in the system memory when a SQL statement is executed. A cursor contains information on a select statement and the rows of data accessed by it.
+A cursor is a temporary work area created in the system memory when a SQL statement is executed. 
+
+A cursor contains information on a select statement and the rows of data accessed by it.
 
 
 Implicit cursors
 -----
 
-These are created by default when DML statements like, INSERT, UPDATE, and DELETE statements are executed. They are also created when a SELECT statement that returns just one row is executed.
+These are created by default when DML statements like, INSERT, UPDATE, and DELETE statements are executed. 
+
+They are also created when a SELECT statement that returns just one row is executed.
 
 %FOUND, The return value is TRUE or FALSE
 
@@ -91,14 +95,17 @@ LOOP
  
 
      DECLARE 
-      CURSOR emp_cur IS 
-      SELECT first_name, last_name, salary FROM emp_tbl; 
-     emp_rec emp_cur%rowtype; 
+       CURSOR emp_cur IS 
+       SELECT first_name, last_name, salary 
+       FROM emp_tbl; 
+      
+       emp_rec emp_cur%rowtype; 
+     
      BEGIN 
-     FOR emp_rec in sales_cur 
-     LOOP  
-      dbms_output.put_line(emp_cur.first_name || ' ' ||emp_cur.last_name 
-        || ' ' ||emp_cur.salary);  
-     END LOOP; 
+       FOR emp_rec in sales_cur 
+       LOOP  
+          dbms_output.put_line(emp_cur.first_name || ' ' ||emp_cur.last_name 
+                               || ' ' ||emp_cur.salary);  
+       END LOOP; 
     END;
      /
