@@ -52,38 +52,39 @@ How to access an Explicit Cursor
  
 LOOP
 ----
+
 1. Simple Loop
 
-LOOP 
+       LOOP 
 
-   statements; 
-   
-   EXIT; 
-   
-   {or EXIT WHEN condition;}
-   
-END LOOP; 
+          statements; 
+
+          EXIT; 
+
+          {or EXIT WHEN condition;}
+
+       END LOOP; 
 
 
 2. FOR LOOP:
 
-FOR record_name IN cusror_name 
+       FOR record_name IN cusror_name 
 
-LOOP 
+       LOOP 
 
-    process the row...
-    
-END LOOP; 
+           process the row...
+
+       END LOOP; 
 
 
 3. While LOOP
 
-WHILE <condition> 
- 
- LOOP statements; 
- 
-END LOOP; 
- 
+       WHILE <condition> 
+
+        LOOP statements; 
+
+       END LOOP; 
+
  
  Example
  ----
